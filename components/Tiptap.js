@@ -209,7 +209,7 @@ const MenuBar = ({ editor }) => {
 const TipTap = ({ noteContent, setContent, currPage }) => {
   const editor = useEditor(
     {
-      extensions: [StarterKit],
+      extensions: [StarterKit, TaskList],
       editorProps: {
         attributes: {
           class:

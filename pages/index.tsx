@@ -80,13 +80,13 @@ export default function Home() {
                         <ul className='divide-y divide-slate-500'>
                             {notebooksValue.docs.map((nbdoc) => (
                                 <div key={nbdoc.id} className='px-4 py-2 text-white bg-slate-600'>
-                                    <p className='text-lg'>{nbdoc.data().title}</p>
+                                    <p className='text-lg underline'>{nbdoc.data().title}</p>
                                     <ul className='divide-y divide-slate-500'>
                                         {value.docs.filter(doc => nbdoc.data().notes.includes(doc.id.toString())).map((doc) => {
                                             return (
                                                 <div key={doc.id} className='px-4 py-2 text-white bg-slate-600'>
                                                     <button className='w-full text-left' onClick={() => setCurrentPage(value?.docs.map(function (x) { return x.id; }).indexOf(doc.id))}>
-                                                        <p className='text-lg'>{doc.data().title}</p>
+                                                        <p className='text-base'>{doc.data().title}</p>
                                                     </button>
                                                 </div>)
                                         })
